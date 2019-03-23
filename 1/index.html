@@ -15,17 +15,17 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/hi/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="/hi/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="/hi/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="/hi/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="/hi/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="/hi/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136781716-1"></script>
@@ -39,9 +39,6 @@
 </head>
 
 <body>
-  <h1>1</h1>
-  <a href="/2">Continue to donate.html</a>
-
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -59,12 +56,120 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  
+  <!-- Header Logo -->
+  <div id="header">
+    <div class="container-fluid margin-bot-sm">
+      <div class="row header-logo">
+        <div class="col-sm-12">
+          <img class="logo" src="/ressources/logo.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Tooltip -->
-  <script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script>
-</body>
+  <!-- Content 1: Wasser genießen -->
+  <div class="container-fluid margin-bot-sm">
+    <div class="row main-content">
+      <div class="col-md-12">
+        <h3>
+          Wir hoffen, Du genießt Dein Wasser.<br>
+          Teile Deine Freude in nur 3 Klicks.<br>
+          <span class="p-subtext">Der Gegenwert des Produktes entspricht der Spendensumme</span>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Content 1: Betrag -->
+  <div class="container-fluid margin-bot">
+    <div class="row bg-grey">
+      <div class="col-xs-">
+        <img src="/ressources/water.png" class="custom-img" alt="">
+      </div>
+      <div class="col-xs my-auto" style="margin-left: 20vw;">
+        <h2>
+          <span id="amount">2,49</span>€
+        </h2>
+      </div>
+      <!--<div class="col-xs-5 my-auto">
+          <a class="custom-btn"><i class="fa fa-minus"></i></a>
+          <a class="custom-btn"><i class="fa fa-plus"></i></a>
+      </div>-->
+    </div>
+  </div>
+
+
+  <!-- Content 2: Projekt wählen -->
+  <div class="container-fluid margin-bot-sm">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>
+          Wähle ein Projekt, <br>das Du unterstützen möchtest.
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- Projekt 1 -->
+    <div class="row bg-grey margin-bot">
+      <div class="col-xs ">
+        <img src="/ressources/bike.png" class="custom-img float-left" alt="pic">
+      </div>
+      <div class="col-xs my-auto left-align" style="margin-left:6vw;">
+        <div class="card-description my-auto">
+            <p>
+                <i class="fa fa-heart"></i>&nbsp;Fahrräder für Pumuckel Kinderheim<br>
+              &nbsp;<i class="fa fa-map-marker"></i>&nbsp;&nbsp;Mannheim
+            </p>
+            <a href="/2/">Spenden</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Projekt 2 -->
+    <div class="row bg-grey margin-bot">
+        <div class="col-xs ">
+          <img src="/ressources/child.png" class="custom-img float-left" alt="pic">
+        </div>
+        <div class="col-xs my-auto left-align" style="margin-left:6vw;">
+          <div class="card-description my-auto">
+              <p>                
+                <i class="fa fa-heart"></i> Wasser für Jamal<br>
+                &nbsp;<i class="fa fa-map-marker"></i>&nbsp;&nbsp;Kisangara, Tanzania
+              </p>
+              <a href="/2/">Spenden</a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div id="bot">
+      <div class="container-fluid"> <hr>
+        <!--<div class="row auto-margin margin-bot-sm">
+          <div class="col-xs auto-margin">
+            <a href="#" class="footer-button">Andere Projekte</a>
+          </div>
+          <div class="col-xs my-auto auto-margin">
+            <a href="#" class="footer-button">Über Doubble</a>
+          </div>
+        </div>-->
+
+        <div class="row auto-margin">
+          <div class="col-xs-12 auto-margin">
+            <a href="/hi" id="imprint">Über &middot;</a>  
+            <a href="#" id="imprint">Andere Projekte &middot;</a>  
+            <a href="/impressum.html" id="imprint">Impressum &middot; Datenschutz</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
 </html>

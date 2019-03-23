@@ -1,0 +1,190 @@
+:root {
+    --elements-bg-color: rgba(255, 255, 255, .3);
+    
+    --typo-main: #fff;
+    --typo-sub: #fff;
+    /*--typo-main: #505050;
+    --typo-sub: #3d3d3d;*/
+
+    --bg-start: #F99D48;
+    --bg-end: #E36B60;
+    
+    --footer-text: rgba(255, 255, 255, .7);
+  }
+
+body {
+    font-family: "Open Sans", sans-serif;
+    max-width: 720px;
+    margin:auto;
+    color: var(--typo-main);
+
+    background-image: linear-gradient(var(--bg-start), var(--bg-end));
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+}
+
+/*
+* TYPOGRAPHY
+*/
+
+h2 {
+    font-size: 200%;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 110%;
+    font-weight: 400;
+}
+
+.p-subtext {
+    font-size: 60%;
+    color: var(--typo-sub);
+    font-style: italic;
+
+}
+
+.card-description {
+    font-size: 80%;
+    line-height: 1.5;
+}
+
+.card-description a { 
+    line-height: 1.5;
+    color: #EA7957;
+    border: 1px solid var(--typo-main);
+    background-color: var(--typo-main);;
+    border-radius: 16px;
+    padding: 4px 20px;
+}
+
+/* HELPER CLASSES */
+.auto-margin {
+    margin: auto;
+}
+
+.margin-bot {
+    margin-bottom: 5vh;
+}
+
+.margin-top {
+    margin-top: 4vh;
+}
+
+.margin-bot-sm {
+    margin-bottom: 2vh;
+}
+
+.margin-top-sm {
+    margin-top: 2vh;
+}
+
+/* 
+* CUSTOM CLASSES
+*/
+
+#header{
+    background-color: white;
+}
+
+.header-logo {
+    -webkit-box-shadow: 0px -35px 26px 37px rgba(143,143,143,0.36);
+    -moz-box-shadow: 0px -35px 26px 37px rgba(143,143,143,0.36);
+    box-shadow: 0px -35px 26px 37px rgba(143,143,143,0.36);
+}
+
+.row {
+    text-align: center;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.main-content {
+    margin-top: 10px;
+}
+
+.img-fluid {
+    border-radius: 50%;
+    max-width: 80px;
+}
+
+.custom-img {
+    border-radius: 50%;
+    max-width: 90px;
+    border: 1px solid var(--elements-bg-color);
+}
+
+.bg-grey {
+    margin-left: 0vw;
+    background-color: var(--elements-bg-color);
+    border-bottom-left-radius: 45px;
+    border-top-left-radius: 45px;
+}
+
+.logo{
+    max-width: 30%;
+    height: auto;
+}
+
+.custom-btn {
+    /* unused! */
+    background: none;
+    padding: 0vw 4vw;
+    font-size: 10px;     
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+/* FOOTER */
+
+footer {
+    color: var(--footer-text);
+}
+
+#bot {
+    position: fixed;
+    bottom: 2vh;
+  
+    /* And if you want the div to be full-width: */
+    left: 0;
+    right: 0;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: 70%;
+    font-weight: 300;
+    color: var(--footer-text);
+}
+
+footer a:focus{
+    text-decoration: none;
+    font-size: 70%;
+    font-weight: 300;
+    color: var(--footer-text);
+}
+
+.footer-button {    
+    padding: .8vh 7vw;
+    border: .4px solid var(--footer-text);
+    border-radius: 20px;
+    
+}
+
+#imprint {
+    color: rgba(255, 255, 255, .5);
+    font-size: 60%;
+    letter-spacing: 1px;
+}
+
+hr {
+    border-color: rgba(255, 255, 255, .2);
+    height: .2px;
+    
+}

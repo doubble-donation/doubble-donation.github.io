@@ -10,10 +10,12 @@
     --bg-end: #E36B60;
     
     --footer-text: rgba(255, 255, 255, .7);
+
+    --image-size: 95px;
   }
 
 html {
-    height: 100%;
+    min-height: 110%;
 }
 
 body {
@@ -57,7 +59,7 @@ h3 {
 }
 
 .card-description p {
-    font-size: 110%;
+    font-size: 97%;
 }
 
 .card-description a { 
@@ -138,14 +140,9 @@ h3 {
     margin-top: 10px;
 }
 
-.img-fluid {
-    border-radius: 50%;
-    max-width: 80px;
-}
-
 .custom-img {
     border-radius: 50%;
-    max-width: 95px;
+    max-width: var(--image-size);
     border: 1px solid var(--elements-bg-color);
 }
 

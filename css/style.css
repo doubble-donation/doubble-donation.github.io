@@ -12,6 +12,10 @@
     --footer-text: rgba(255, 255, 255, .7);
   }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     max-width: 720px;
@@ -23,7 +27,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
-    height: 115vh;
+    /*height: 115vh;*/
 }
 
 /*
@@ -52,13 +56,26 @@ h3 {
     line-height: 1.5;
 }
 
+.card-description p {
+    font-size: 110%;
+}
+
 .card-description a { 
     line-height: 1.5;
     color: #EA7957;
     border: 1px solid var(--typo-main);
-    background-color: var(--typo-main);;
+    background-color: var(--typo-main);
     border-radius: 16px;
     padding: 4px 20px;
+    transition: background-color .4s, color .2s;
+    -webkit-transition: background-color .4s, color .2s;
+}
+
+.card-description a:hover { 
+    background-color: rgba(255, 255, 255, .1);
+    color: var(--typo-main);
+    text-decoration: none;
+    
 }
 
 /* HELPER CLASSES */
@@ -128,7 +145,7 @@ h3 {
 
 .custom-img {
     border-radius: 50%;
-    max-width: 90px;
+    max-width: 95px;
     border: 1px solid var(--elements-bg-color);
 }
 
@@ -158,15 +175,7 @@ h3 {
 
 footer {
     color: var(--footer-text);
-}
-
-#bot {
-    position: fixed;
-    bottom: 2vh;
-  
-    /* And if you want the div to be full-width: */
-    left: 0;
-    right: 0;
+    padding-bottom: 20px;
 }
 
 footer a{

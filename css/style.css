@@ -28,8 +28,6 @@ body {
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
-
-    /*height: 115vh;*/
 }
 
 /*
@@ -44,6 +42,11 @@ h2 {
 h3 {
     font-size: 110%;
     font-weight: 400;
+}
+
+h4 {
+    font-size: 95%;
+    font-weight: 300;
 }
 
 .p-subtext {
@@ -77,7 +80,6 @@ h3 {
     background-color: rgba(255, 255, 255, .1);
     color: var(--typo-main);
     text-decoration: none;
-    
 }
 
 /* HELPER CLASSES */
@@ -204,4 +206,66 @@ footer a:focus{
 hr {
     border-color: rgba(255, 255, 255, .2);
     height: .2px;
+}
+
+/*
+* PAGE 2 STUFF
+*/
+
+.back-nav {
+    color: var(--bg-end);
+    font-size: 110%;
+}
+
+.pm {
+    line-height: 1.5;
+    
+    border: 1px solid var(--typo-main);
+    background-color: var(--typo-main);
+    border-radius: 10px;
+    padding: 5px 0px;
+    /*transition: background-color .4s, color .2s;
+    -webkit-transition: background-color .4s, color .2s;*/
+    width: 100%;
+    color: #EA7957;
+    font-size: 70%;
+}
+
+.pm:hover {
+    background-color: rgba(255, 255, 255, .1);
+    text-decoration: none;
+    color: var(--typo-main);
+}
+
+.pm:hover * {
+    background-color: rgba(255, 255, 255, .1);
+    text-decoration: none;
+    color: var(--typo-main);
+}
+
+.pm-a:hover {
+    text-decoration: none;
+}
+
+
+/*
+* PAGE 3 Stuff
+*/ 
+.info-text {
+    background-color: var(--elements-bg-color);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, .3);
+
+    text-align: left;
+}
+
+.info-text ol {
+    font-size: 90%;
+    font-weight: 300;
+    padding: 6px 12px;
+}
+
+.info-text a {
+    color: var(--bg-end);
+    text-decoration: underline;
 }

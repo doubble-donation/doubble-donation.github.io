@@ -1,0 +1,165 @@
+:root {
+    --elements-bg-color: rgba(255, 255, 255, .3);
+    
+    --typo-primary: #444444;
+    --typo-secondary: #646464;
+    --typo-tertiary: #797979;
+
+    --cl-primary: #E46E6E;
+    --cl-secondary: rgba(228, 110, 110, .6);
+    
+    --footer-text: rgba(255, 255, 255, .7);
+
+    --image-size: 95px;
+  }
+
+html {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    max-width: 720px;
+    color: var(--typo-main);
+
+}
+
+/*
+* TYPOGRAPHY
+*/
+
+h2 {
+    font-size: 200%;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 110%;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 95%;
+    font-weight: 300;
+}
+
+.p-subtext {
+    font-size: 60%;
+    color: var(--typo-sub);
+    font-style: italic;
+
+}
+
+
+/* HEADER */
+#header{
+    background-color: white;
+    z-index: 200;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.header-icon {
+    max-height: 4vh;
+    max-width: 8vw;
+}
+
+/* 
+* DOUBBLE INFO
+* _BACK
+*/
+
+#doubble-info {
+    z-index: 1;
+    height: 60vh;
+}
+
+/* 
+* PROJECT INFO
+* _MID
+*/
+
+#project-info {
+    z-index: 2;
+    position: absolute;
+    /*top:10vh;*/ /* 10vh = 2vh padding header each + 4 vh icons*/
+    width: 100vw;
+}
+
+#accordion {
+    position:absolute;
+    width: 100vw;
+    bottom:0;
+}
+
+
+#accordion, button {
+    width: 100%;
+}
+
+/* FOOTER */
+
+#container {
+    min-height:100vh;
+    position:relative;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background: rgb(196, 196, 196);
+    font-size: 12px;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+  footer li {
+    float: right;
+}
+  
+  footer li a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: var(--cl-secondary);
+}
+  
+  footer a:hover {
+    text-decoration: none;
+    color: var(--cl-secondary);
+}
+
+  
+/* HELPER CLASSES */
+.auto-margin {
+    margin: auto;
+}
+
+.margin-bot {
+    margin-bottom: 2vh;
+}
+
+.margin-bot-sm {
+    margin-bottom: 1vh;
+}
+
+.margin-top {
+    margin-top: 2vh;
+}
+
+
+.margin-top-sm {
+    margin-top: 1vh;
+}
+
+#project-info .col {
+    margin: 0;
+    padding: 0;
+}

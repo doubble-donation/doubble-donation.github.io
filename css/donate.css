@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Roboto', sans-serif;
     max-width: 720px;
     color: var(--typo-main);
 
@@ -44,11 +44,28 @@ h4 {
     font-weight: 300;
 }
 
+p {
+    font-size: 14px;
+}
+
+#collapseOneHead {
+    color: black;
+    text-decoration: none;
+    outline: none;
+    cursor: grab;}
+
+
+#collapseOneHead-pi:hover, #collapseOneHead-pi:focus, #p-head-pi, #p-head-pi:focus, #p-head-pi:hover  {
+    color: black;
+    text-decoration: none;
+    outline: none;
+}
+
+
 .p-subtext {
     font-size: 60%;
     color: var(--typo-sub);
     font-style: italic;
-
 }
 
 
@@ -58,6 +75,7 @@ h4 {
     z-index: 200;
     padding-top: 2vh;
     padding-bottom: 2vh;
+    height: 6vh;
 }
 
 .header-icon {
@@ -73,32 +91,126 @@ h4 {
 #doubble-info {
     z-index: 1;
     height: 60vh;
+    overflow: scroll;
+}
+
+#container-di {
+    padding-top: 2vh;
+}
+
+#nav-di a {
+    font-size: 12px;
+    color: var(--cl-primary)
+}
+
+/* 
+* PROJECT TEASER
+* _MID
+*/
+
+#project-teaser {
+    z-index: 2;
+    position: absolute;
+    width: 100vw;
+    top: 70vh; /* anchored to bottom, that's were the containers end*/
+    
+}
+
+#accordion-pt, button {
+    width: 100%;
+}
+
+.card {
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    
+}
+
+.card-head-pt {
+    height: 20vh;
+}
+
+.card-body-pt {
+    height: 35vh;
+    overflow:hidden;
 }
 
 /* 
 * PROJECT INFO
-* _MID
+* _BACK
 */
 
 #project-info {
-    z-index: 2;
+    z-index: 3;
     position: absolute;
-    /*top:10vh;*/ /* 10vh = 2vh padding header each + 4 vh icons*/
     width: 100vw;
+    top: 70vh; /* anchored to bottom, that's were the containers end*/
 }
 
-#accordion {
+.card {
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card-head-pi {
+    height: 15vh;
+}
+
+.card-body-pi {
+    height: 35vh;
+    overflow:scroll;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+
+/*
+* BOTH OVERLAYS 
+*/
+
+#accordion-pt, #accordion-pi {
     position:absolute;
     width: 100vw;
     bottom:0;
+    left: 0;
+}
+
+.accordion-icon{
+    color: var(--cl-primary);
+    font-size: 150%;
 }
 
 
-#accordion, button {
+.pip {
+    background-image: url("/ressources/img/help3.png");
     width: 100%;
+    height: auto;
 }
 
-/* FOOTER */
+/* 
+* ACTION BUTTONS
+*/
+
+#button-action {
+    background: #e2e2e2;
+    z-index: 3;
+    position: absolute;
+    width: 100vw;
+    top: 69vh; /* anchored to top, that's were the containers starts*/
+}
+
+#content-ba {
+    height: 26vh;
+    
+}
+
+/*
+* FOOTER
+*/
 
 #container {
     min-height:100vh;
@@ -107,7 +219,7 @@ h4 {
 
 footer {
     position: absolute;
-    bottom: 0;
+    top: 95vh;
     width: 100%;
     height: auto;
     background: rgb(196, 196, 196);
@@ -162,4 +274,8 @@ footer ul {
 #project-info .col {
     margin: 0;
     padding: 0;
+}
+
+.color-primary {
+    color: var(--cl-primary);
 }

@@ -217,10 +217,17 @@
       <!-- Project Info End --> 
 
       <div id="button-action">
-        <div class="container-fluid">
+        <div class="container-fluid margin-top">
           <div class="row">
             <div class="col">
-              <div id="content-ba">Bissl text</div>
+              <div id="content-ba">
+                <div class="slidecontainer margin-bot">
+                  <input type="range" min="10" max="99" value="1" class="slider" id="range-ba">    
+                  <span class="range-slider-value"><span id="amount">2.5</span> €</span>
+                </div>
+                
+                <button type="button" class="btn">Helfen</button>
+              </div>
             </div>
           </div>
         </div>
@@ -239,6 +246,9 @@
   <!-- JavaScript Libraries -->
   <script src="/hi/lib/jquery/jquery.min.js"></script>
   <script src="/hi/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Nice Slider by andreruffert
+  <script src="https://rawgit.acom/andreruffert/rangeslider.js/develop/dist/rangeslider.min.js"></script>
+   -->
   <script>
     let collapseOnePt = $("#collapseOne-pt")
     let collapseOneHeadPt = $("#collapseOneHead-pt")
@@ -259,6 +269,15 @@
         collapseOneHeadIconPi.removeClass("fa-rotate-180")
       } else collapseOneHeadIconPi.addClass("fa-rotate-180")
     })
+
+    // Slider stuff
+    var slider = document.getElementById("range-ba");
+    var output = document.getElementById("amount");
+    output.innerHTML = (slider.value/10).toFixed(1);
+
+    slider.oninput = function() {
+      output.innerHTML = (this.value/10).toFixed(1);
+}
   </script>
 
   </div>

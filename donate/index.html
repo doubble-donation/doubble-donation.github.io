@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Doubble - Donation made simple</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!--<meta content="width=device-width, initial-scale=1.0" name="viewport">-->
   <meta content="donation enjoy" name="keywords">
   <meta content="Donation amde simple" name="description">
   <meta content="#FFFFFF" name = "theme-color">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- Favicons -->
   <link href="/ressources/favicon/favicon.png" rel="icon">
@@ -44,16 +45,20 @@
 </head>
 
 <body>
+  <!-- Outer Container Begin-->
   <div id="container">
   <!-- Header -->
   <div id="header">
     <div class="container-fluid">
       <div class="row header-logo">
-        <div class="col my-auto">
-          <img class="header-icon float-left" src="/ressources/icons/burger.png">
-        </div>
+          <span data-toggle="tooltip" data-placement="bottom" title="Login coming soon!">
+          <div class="col my-auto">
+            <img class="header-icon float-left" src="/ressources/icons/burger.png">
+          </div>
+        </span>
         <div class="col my-auto" >
-          <img class="header-icon float-right" src="/ressources/icons/avatar.png">
+          <!--<img class="header-icon float-right" src="/ressources/icons/avatar.png">-->
+          <img class="header-icon float-right" src="/ressources/favicon/secondary_apple-touch-icon.png" style="border-radius: 50%">
         </div>
       </div>
     </div>
@@ -64,9 +69,10 @@
     <div class="container-fluid">
       <div class="row header-logo">
         <div class="col my-auto text-center" id="container-di">
-          <p>
-            Doubble ist eine smarte Spendenplattform. Wir verbinden Unternehmen, Konsumenten und soziale Projekte.
-          </p>
+          <h4>
+            Doubble ist eine smarte Spendenplattform. <i class="fa fa-heart"></i>
+            <i class="fa fa-hand-holding-heart"></i><!--Wir verbinden Unternehmen, Konsumenten und soziale Projekte.-->
+          </h4>
 
           <nav id="nav-di">
               <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
@@ -125,12 +131,13 @@
         <div class="col my-auto">
 
           <!-- Accordion Begin -->
-          <div id="accordion-pt">
-            <div class="card pip"> 
+          <div id="accordion-pt" style="">
+            <div class="card pip card-pt"> 
               <div class="card-head-pt">
                 <h5 class="mb-0">
                   <button id="collapseOneHead-pt" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne-pt" aria-expanded="true" aria-controls="collapseOne-pt">
-                    <i id="collapseOneHeadIcon-pt" class="align-top fa fa-caret-down accordion-icon"></i>
+                    <!--<i id="collapseOneHeadIcon-pt" class="align-top fa fa-caret-down accordion-icon"></i>-->
+                    <hr class="horizontal-line-card">
                   </button>
                 </h5>
               </div>
@@ -149,106 +156,129 @@
   </div>
   <!-- Project Teaser End -->
 
-    <!-- Project Info -->
+  <!-- Project Info -->
   <div id="project-info">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col my-auto">
-  
-            <!-- Accordion Begin -->
-            <div id="accordion-pi">
-              <div class="card" style="background-color: rgba(255, 255, 255, 0.6);"> 
-                <div class="card-head-pi">
-                    <button id="collapseOneHead-pi" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne-pi" aria-expanded="true" aria-controls="collapseOne-pi">
-                      <i id="collapseOneHeadIcon-pi" class="align-top fa fa-caret-up accordion-icon"></i>
-                      <div class="container-fluid">
-                          <div class="row">
-                            <div class="col-2">
-                              <img class="img-fluid" src="/ressources/img/project-icon-svt.png">
-                            </div>
-                            <div class="col-8">
-                              <p id="p-head-pi">
-                                Save the children ist ein Projekt für Kinder.
-                                Max. 2 Zeilen hier.
-                              </p>
-                            </div>
-                            <div class="col-2">                            
-                              <img class="img-fluid" src="/ressources/img/project-icon-svt.png">
-                            </div>
-                            
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col my-auto">
+
+          <!-- Accordion Begin -->
+          <div id="accordion-pi">
+            <div class="card" id="card-pi" > 
+              <div class="card-head-pi">
+                  <button id="collapseOneHead-pi" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne-pi" aria-expanded="true" aria-controls="collapseOne-pi">
+                    <!--<i id="collapseOneHeadIcon-pi" class="align-top fa fa-caret-up accordion-icon"></i>-->
+                    <hr class="horizontal-line-card">
+                    <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-2">
+                            <img class="img-fluid" src="/ressources/img/project-icon-svt.png">
                           </div>
+                          <div class="col-8">
+                            <p id="p-head-pi">
+                              Save the children ist ein Projekt für Kinder.
+                              Max. 2 Zeilen hier.
+                            </p>
+                          </div>
+                          <div class="col-2">                            
+                            <img class="img-fluid" src="/ressources/img/project-icon-svt.png">
+                          </div>
+                          
                         </div>
-                    </button>
-                    
-                </div>
-                <div id="collapseOne-pi" class="collapse" aria-labelledby="headingOne-pi" data-parent="#accordion-pi">
-                  <div class="card-body-pi text-center">
-                    <div id="description-pi">
-                      <p>
-                        Das ist eine genaue Beschreibung hier. Save the children ist ein Projekt für Kinder.
-                        Der Fokus liegt darauf Kinder zu saven.
-                      </p>
-                      <p>
-                        Save the children ist ein Projekt für Kinder. <br>
-                        Der Fokus liegt darauf Kinder zu saven.
-                      </p>
-                      <p>
-                        Save the children ist ein Projekt für Kinder. <br>
-                        Der Fokus liegt darauf Kinder zu saven.
-                      </p>
-                      <p>
-                        Stay hipp. Stay tight Stay Doubble ✌️
-                      </p>
-                      <p>
-                        Save the children ist ein Projekt für Kinder. <br>
-                        Der Fokus liegt darauf Kinder zu saven.
-                      </p>
-                    </div>
+                      </div>
+                  </button>
+                  
+              </div>
+              <div id="collapseOne-pi" class="collapse" aria-labelledby="headingOne-pi" data-parent="#accordion-pi">
+                <div class="card-body-pi text-center">
+                  <div id="description-pi">
+                    <p>
+                      Das ist eine genaue Beschreibung hier. Save the children ist ein Projekt für Kinder.
+                      Der Fokus liegt darauf Kinder zu saven.
+                    </p>
+                    <p>
+                      Save the children ist ein Projekt für Kinder. <br>
+                      Der Fokus liegt darauf Kinder zu saven.
+                    </p>
+                    <p>
+                      Save the children ist ein Projekt für Kinder. <br>
+                      Der Fokus liegt darauf Kinder zu saven.
+                    </p>
+                    <p>
+                      Stay hipp. Stay tight Stay Doubble ✌️
+                    </p>
+                    <p>
+                      Save the children ist ein Projekt für Kinder. <br>
+                      Der Fokus liegt darauf Kinder zu saven.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Accordion End -->
           </div>
-  
+          <!-- Accordion End -->
         </div>
+
       </div>
     </div>
-      <!-- Project Info End --> 
+  </div>
+  <!-- Project Info End --> 
 
-      <div id="button-action">
-        <div class="container-fluid margin-top">
-          <div class="row">
-            <div class="col">
-              <div id="content-ba">
-                <div class="slidecontainer margin-bot">
-                  <input type="range" min="10" max="99" value="1" class="slider" id="range-ba">    
-                  <span class="range-slider-value"><span id="amount">2.5</span> €</span>
+    
+  <!-- Action Buttons Begin -->
+  <div id="button-action">
+    <div class="container-fluid margin-top">
+      <div class="row">
+        <div class="col">
+          <div id="content-ba">
+            <div class="slidecontainer margin-bot">
+              <div style="padding-top:20px; display: inline;">
+                <input type="range" min="10" max="99" value="20" class="slider" id="range-ba">
+              </div>
+              <span class="range-slider-value"><span id="amount">2.5</span> €</span>
+            </div>
+            <button type="button" class="btn" id="helfen-action-btn">Helfen&nbsp;&nbsp;<i class="fa fa-paypal"></i></button>
+            <div class="margin-top ">
+              <div class="row">
+                <div class="col-7">
+                  <p class="payment-method text-left" style="margin-left:6px;">
+                    
+                    <span data-toggle="tooltip" title="Coming soon!">
+                      <i class="fa fa-lock"></i>&nbsp;&nbsp;Andere Zahlungsmethode
+                    </span>
+                  </p>
                 </div>
-                
-                <button type="button" class="btn">Helfen</button>
+                <div class="col-5">
+                  <p class="payment-method text-right" style="margin-right:6px;">
+                    <a href="/hi/" target="_new;">
+                      <i class="fa fa-info-circle"></i>&nbsp;&nbsp;Über Doubble
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </div>
+  <!-- Action Buttons End -->
 
+  </div>
+  <!-- Container End -->
   <footer>
-    <div>
-        <ul>
-        <li><a href="/impressum.html#datenschutz">Privacy</a></li>
-        <li><a href="/impressum.html">Imprint & Disclaimer</a></li>
-        </ul>
+    <div class="text-center">
+      <a href="/impressum.html#datenschutz">Datenschutz</a>&nbsp;&middot;&nbsp;
+      <a href="/impressum.html">Impressum</a>
     </div>
   </footer>
 
   <!-- JavaScript Libraries -->
   <script src="/hi/lib/jquery/jquery.min.js"></script>
   <script src="/hi/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Nice Slider by andreruffert
-  <script src="https://rawgit.acom/andreruffert/rangeslider.js/develop/dist/rangeslider.min.js"></script>
-   -->
+  
+  <script src="./hammer.min.js"></script>
+
   <script>
     let collapseOnePt = $("#collapseOne-pt")
     let collapseOneHeadPt = $("#collapseOneHead-pt")
@@ -272,12 +302,49 @@
 
     // Slider stuff
     var slider = document.getElementById("range-ba");
-    var output = document.getElementById("amount");
+    var output = document.getElementById("amount");    
+    slider.value = 25; //must be between 10 and 99
     output.innerHTML = (slider.value/10).toFixed(1);
-
+    
     slider.oninput = function() {
       output.innerHTML = (this.value/10).toFixed(1);
-}
+    }
+
+    // Hammer js
+    /* Click Detection: get outer divs of project teaser and project info
+    * Collapse: use collapseOnePt and collapseOnePi elements from above
+    */
+    let ptElement = document.getElementById("project-teaser")
+    let piElement = document.getElementById("project-info")
+    
+    var ptHammertime = new Hammer(ptElement);
+    var piHammertime = new Hammer(piElement);
+
+    // enable vertical pans
+    ptHammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+    piHammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+    // add event listeners
+    ptHammertime.on('panup pandown', function(ev) {
+      if (ev.type == "panup" && !collapseOnePt.hasClass("show")) collapseOnePt.collapse("toggle")
+      else if (ev.type == "pandown" && collapseOnePt.hasClass("show")) {
+        collapseOnePt.collapse("toggle")
+        if (collapseOnePi.hasClass("show")) collapseOnePi.collapse("toggle")
+      }
+    });
+    piHammertime.on('panup pandown', function(ev) {
+      if (ev.type == "panup" && !collapseOnePi.hasClass("show")) {
+        collapseOnePi.collapse("toggle")
+        // if teaser is not shown also toggle teaser
+        if (!collapseOnePt.hasClass("show")) collapseOnePt.collapse("toggle")
+    }
+      else if (ev.type == "pandown" && collapseOnePi.hasClass("show")) collapseOnePi.collapse("toggle")
+    });
+
+    // Tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
   </script>
 
   </div>

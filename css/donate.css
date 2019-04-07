@@ -10,6 +10,7 @@
 
     --cl-primary: #E46E6E;
     --cl-secondary: #eea4a4;
+    --cl-tertiary: #5beed4;
     
     --footer-text: rgba(255, 255, 255, .7);
 
@@ -20,13 +21,13 @@
     --doubble-info-height: 60vh;
     --container-di-padding-top: 2vh;
 
-    --project-teaser-top: 74vh; /* anchored to bottom, that's were the containers end*/
-    --card-head-pt-height: 20vh;
-    --card-body-pt-height: 40vh;
+    --project-teaser-top: 76vh; /* anchored to bottom, that's were the containers end*/
+    --card-head-pt-height: 19vh;
+    --card-body-pt-height: 47vh;
 
-    --project-info-top: 74vh; /* anchored to bottom, that's were the containers end*/
+    --project-info-top: 76vh; /* anchored to bottom, that's were the containers end*/
     --card-head-pi-height: 14vh;
-    --card-body-pi-height: 41vh;
+    --card-body-pi-height: 47vh;
 
     --button-action-top: 74vh; /* anchored to top, that's were the containers starts*/
     --content-ba-height: 21vh;
@@ -66,13 +67,14 @@ h3 {
 }
 
 h4 {
-    font-size: 95%;
+    font-size: 14px;
+    color: var(--typo-tertiary);
     font-weight: 400;
 }
 
 h4 i {
     font-size: 90% !important;
-    color: var(--typo-primary);
+    color: var(--typo-tertiary);
 }
 
 p {
@@ -92,11 +94,14 @@ a, a:hover {
 
 
 #collapseOneHead-pi:hover, #collapseOneHead-pi:focus, #p-head-pi, #p-head-pi:focus, #p-head-pi:hover  {
-    color: black;
+    color: var(--typo-primary);
     text-decoration: none;
     outline: none;
 }
 
+#p-head-pi {
+    margin-top: -8px;
+}
 
 .p-subtext {
     font-size: 60%;
@@ -109,6 +114,63 @@ a, a:hover {
     font-size: 12px;
     cursor: pointer;
     
+}
+
+/*
+* ABOUT BANNER
+*/
+#about-banner {
+    z-index: 4;
+    height: 6vh;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 5px;
+    left: 20vw;
+    display:none;
+    padding: 1vh;
+    color: var(--typo-secondary);
+
+    /*border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;*/
+
+    
+}
+
+#about-btn {
+    font-size: 12px;
+    width: auto;
+    margin: 0;
+
+    background-color: #fff;
+    color: var(--cl-primary);
+
+    border-radius: 40px;
+    border: 1px solid var(--cl-secondary);
+    
+    padding: 10px 24px;
+}
+
+#about-btn:focus {
+    outline: none !important;
+}
+
+.modal-header {
+    background-color: #fff;
+    color: var(--typo-tertiary);
+    margin:auto;
+}
+
+.btn-modal-close {
+    background-color: #fff;
+    color:  var(--typo-tertiary);
+    border: 1px solid var(--typo-tertiary);
+    border-radius: 50px;
+}
+
+.modal-footer p {
+    background-color: #fff;
+    color: var(--typo-tertiary);
+    margin:auto;
 }
 
 
@@ -194,10 +256,12 @@ a, a:hover {
     position: absolute;
     width: 100vw;
     top: var(--project-info-top); /* anchored to bottom, that's were the containers end*/
+    color: var(--typo-primary);
 }
 
 #card-pi {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.75);
+    color: var(--typo-primary);
 }
 
 .card-head-pi {
@@ -212,7 +276,7 @@ a, a:hover {
 }
 
 #description-pi{
-    margin-top: 4vh;
+    margin-top: 0;
 }
 
 /*
@@ -242,15 +306,22 @@ a, a:hover {
 }
 
 .pip {
-    background-image: url("/ressources/img/help3.png");
+    /*background-image: url("/ressources/img/help3.png");*/
+    background-image: url("/ressources/img/help1.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0%;
+
     width: 100%;
     height: auto;
 }
 
 .horizontal-line-card {
     background-color:rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
     width: 40%;
     height: 2px;
+    margin-top: 6px;
 }
 
 /* 
@@ -425,4 +496,13 @@ footer {
 
 .color-primary {
     color: var(--cl-primary);
+}
+
+.no-border {
+    border: none !important;
+}
+
+#nav-tab .active {
+    border-bottom: 1px solid var(--cl-secondary) !important;
+    
 }

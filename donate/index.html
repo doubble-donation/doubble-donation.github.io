@@ -47,15 +47,49 @@
 <body>
   <!-- Outer Container Begin-->
   <div id="container">
+  <div id="about-banner">
+    <div class="text-center">
+    <!-- Button trigger modal -->
+    <button type="button" id="about-btn" class="" data-toggle="modal" data-target="#exampleModal">
+        Doubble in 60 Sekunden erklärt
+    </button>
+    </div>
+  </div>
+  
+  <!-- Modal für Video -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Doubble - So funktioniert's!</h5>
+        </div>
+        <div class="modal-body" style="margin: auto;">
+          <video style="width: 100%" id="about-doubble-vid" controls>
+              <source src="/ressources/vid/about_doubble.mp4" type="video/mp4">
+              <source src="movie.ogg" type="video/ogg">
+            Dein Browser unterstützt das Format leider nicht.
+          </video>
+        </div>
+        <div class="modal-footer text-center">
+            <p>Für noch mehr Informationen, schiebe beide Karten in der App nach unten.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-modal-close" data-dismiss="modal">Close</button>          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
   <!-- Header -->
   <div id="header">
     <div class="container-fluid">
       <div class="row header-logo">
           <span data-toggle="tooltip" data-placement="bottom" title="Login coming soon!">
-          <div class="col my-auto">
-            <img class="header-icon float-left" src="/ressources/icons/burger.png">
-          </div>
-        </span>
+            <div class="col my-auto">
+              <img class="header-icon float-left" src="/ressources/icons/burger.png">
+            </div>
+          </span>
         <div class="col my-auto" >
           <!--<img class="header-icon float-right" src="/ressources/icons/avatar.png">-->
           <img class="header-icon float-right" src="/ressources/favicon/secondary_apple-touch-icon.png" style="border-radius: 50%">
@@ -70,52 +104,40 @@
       <div class="row header-logo">
         <div class="col my-auto text-center" id="container-di">
           <h4>
-            Doubble ist eine smarte Spendenplattform. <i class="fa fa-heart"></i>
+            Doubble ist eine smarte Spendenplattform <i class="fa fa-heart"></i>
             <i class="fa fa-hand-holding-heart"></i><!--Wir verbinden Unternehmen, Konsumenten und soziale Projekte.-->
           </h4>
 
           <nav id="nav-di">
-              <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Einfach</a>
-                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Spontan</a>
-                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Transparent</a>
+              <div class="nav nav-tabs nav-fill no-border" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active no-border" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Einfach</a>
+                <a class="nav-item nav-link no-border" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Spontan</a>
+                <a class="nav-item nav-link no-border" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Transparent</a>
               </div>
             </nav>
             <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <p>
-                    Wir bringen QR-Codes, die zu der Doubble-Plattform führen, auf alltägliche Gebrauchsgüter.
+                  Du unterstützt in nur <b>zwei Klicks</b> ein von uns <b>geprüftes, soziales</b> Projekt aus Deiner Region.
                 </p>
                 <p>
-                  Auf der Plattform ermöglicht es Doubble, mit nur einem Klick den Gegenwert des jeweiligen Produkts an ein regionales Projekt zu spenden. 
+                  Scanne unseren QR-Code und spende mit einem Klick den Gegenwert des Deines Produktes.
                 </p>
                 <p>
-                  Die ausgewählten Projekte stehen in einer Beziehung zu dem jeweiligen Unternehmen. 
+                  Natürlich kannst Du Spendensumme und Projektauswahl auch beliebig anpassen.
                 </p>
               </div>
               <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                 <p>
-                  Doubble integriert teilen in alltägliche Abläufe. Wir bringen unsere Plattform (über QR-Codes) direkt zu Dir.
-                </p>
-                <p>
-                  Dadurch können wir Dir relevante soziale, regionale Projekte zeigen, ohne das ein Mehraufwand für Dich ensteht. Du musst nicht mal den Gedanken zu helfen haben. 
-                </p>
-                <p>
-                  <span class="color-primary">Dich trennt nur ein Klick davon zu Helfen.<br>
-                  Sei ein Helfer. Doubble.</span>
+                  Ob in der Bar mit deinen Freunden, in der Bahn auf dem Weg zur Arbeit oder in deinem Lieblings Café um die Ecke – Wir bringen den Code zu Dir und ermöglichen Dir im <b>hier und jetzt</b> ein wenig Freude zu teilen.
                 </p>
               </div>
               <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                 <p>
-                    Wir bei Doubble haben es uns als Ziel gesetzt, den Spendenprozess vollständig transparent zu gestalten.
-                  </p>
-                  <p>
-                    Hinterlasse Deine E-Mail Adresse und wir werden dir regelmäßige Updates zu Deinem Projekt senden.
-                    (Außschließlich zu Deinem Projekt, kein Spam.)
-                  </p>
-                  <p>
-                    Darüber hinaus garantiert Doubble, dass jeder gespendete Cent ausschließlich im Projekt eingesetzt wird.
-                  </p>
+                  Wir von Doubble garantieren: Deine Spende wird exakt dafür genutzt, wofür Du gespendet hast. Du willst wissen, was mit Deinem Geld passiert?
+                </p>
+                <p>Erstelle ein Konto und <b>verfolge</b> das von Dir unterstützte Projekt.
+                </p>
               </div>
             </div>
 
@@ -131,7 +153,7 @@
         <div class="col my-auto">
 
           <!-- Accordion Begin -->
-          <div id="accordion-pt" style="">
+          <div id="accordion-pt">
             <div class="card pip card-pt"> 
               <div class="card-head-pt">
                 <h5 class="mb-0">
@@ -176,8 +198,7 @@
                           </div>
                           <div class="col-8">
                             <p id="p-head-pi">
-                              Save the children ist ein Projekt für Kinder.
-                              Max. 2 Zeilen hier.
+                              <b>Freezone<br>Straßenkids Mannheim</b>
                             </p>
                           </div>
                           <div class="col-2">                            
@@ -193,23 +214,14 @@
                 <div class="card-body-pi text-center">
                   <div id="description-pi">
                     <p>
-                      Das ist eine genaue Beschreibung hier. Save the children ist ein Projekt für Kinder.
-                      Der Fokus liegt darauf Kinder zu saven.
-                    </p>
+                      Freezone - Straßenkids Mannheim unterstützt Kinder, Jugendliche und junge Erwachsene im Alter von 12-25 Jahren, die von Obdachlosigkeit bedroht oder bereits obdachlos sind.</p>
                     <p>
-                      Save the children ist ein Projekt für Kinder. <br>
-                      Der Fokus liegt darauf Kinder zu saven.
-                    </p>
+                      Das Angebot von Freezone umfasst neben dem Angebot einer Anlaufstelle und Streetwork auch das Projekt StreetNight und die Mannheimer Straßenschule.</p>
                     <p>
-                      Save the children ist ein Projekt für Kinder. <br>
-                      Der Fokus liegt darauf Kinder zu saven.
-                    </p>
-                    <p>
-                      Stay hipp. Stay tight Stay Doubble ✌️
-                    </p>
-                    <p>
-                      Save the children ist ein Projekt für Kinder. <br>
-                      Der Fokus liegt darauf Kinder zu saven.
+                      Freezone – gegründet in 1997 – stellt heute unter alleiniger Trägerschaft des Johann-Peter-Hebel-Heims seine Angebote im Freezone-„Traumhaus“ in J7, 23 zur Verfügung.
+                      <!--
+                        Die Aufrechterhaltung und der bedarfsgerechte Ausbau des Angebotes von Freezone hängen heute und zukünftig von der Vielzahl von Privatpersonen und Unternehmen ab, die durch Ihr soziales Engagement die Unterstützung von Jugendlichen und jungen Erwachsenen in besonders schwierigen Situationen ermöglichen.</p>                        
+                      -->
                     </p>
                   </div>
                 </div>
@@ -345,6 +357,22 @@
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
+
+    // Help banner
+    $("#about-banner").delay(3000).fadeIn('slow');
+  
+    // Video autoplay setting
+    var vid = document.getElementById("about-doubble-vid"); 
+
+    $("body").on("click", function () {
+      if($("body").hasClass("modal-open")) {
+        vid.pause();
+      }
+    })
+    //Optional: Play Video on Modal open
+    /*$("#about-btn").on("click", function() {
+      vid.play();
+    })*/
   </script>
 
   </div>

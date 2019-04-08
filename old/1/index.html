@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Doubble - Donation made simple</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="donation enjoy" name="keywords">
+  <meta content="Donation amde simple" name="description">
+  <meta content="#FFFFFF" name = "theme-color">
+
+  <!-- Favicons -->
+  <link href="/ressources/favicon/favicon.png" rel="icon">
+  <link href="/ressources/favicon/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="/hi/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="/hi/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="/hi/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="/hi/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="/hi/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="/hi/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="/css/style.css" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136781716-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-136781716-1');
+  </script>
+</head>
+
+<body>
+  <!-- Header Logo -->
+  <div id="header">
+    <div class="container-fluid margin-bot-sm">
+      <div class="row header-logo">
+        <div class="col-12">
+          <img class="logo" src="/ressources/logo.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content 1: Wasser genießen -->
+  <div class="container-fluid margin-bot-sm content">
+    <div class="row main-content">
+      <div class="col-md-12">
+        <h3>
+          Wir hoffen, Du genießt Dein Wasser.<br>
+          Teile Deine Freude in nur 3 Klicks.<br>
+          <!--<span class="p-subtext">Der Gegenwert des Produktes entspricht der Spendensumme</span>-->
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Content 1: Betrag -->
+  <div class="container-fluid margin-bot">
+    <div class="row bg-grey">
+      <div class="col-xs-">
+        <img src="/ressources/water.png" class="custom-img" alt="">
+      </div>
+      <div class="col-xs my-auto" style="margin-left: 20vw;">
+        <h2>
+          <span id="amount">2,49</span>€
+        </h2>
+      </div>
+      <!--<div class="col-xs-5 my-auto">
+          <a class="custom-btn"><i class="fa fa-minus"></i></a>
+          <a class="custom-btn"><i class="fa fa-plus"></i></a>
+      </div>-->
+    </div>
+  </div>
+
+
+  <!-- Content 2: Projekt wählen -->
+  <div class="container-fluid margin-bot-sm">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>
+          Wähle ein Projekt, <br>das Du unterstützen möchtest.
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <!-- Projekt 1 -->
+    <div class="row bg-grey margin-bot">
+      <div class="col-xs ">
+        <img src="/ressources/bike.png" class="custom-img float-left" alt="pic">
+      </div>
+      <div class="col-xs my-auto left-align" style="margin-left:6vw;">
+        <div class="card-description my-auto">
+            <p>
+                <i class="fa fa-heart"></i>&nbsp;Fahrräder für Pumuckel Kinderheim<br>
+              &nbsp;<i class="fa fa-map-marker"></i>&nbsp;&nbsp;Mannheim
+            </p>
+            <a href="/21/">Spenden</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Projekt 2 -->
+    <div class="row bg-grey margin-bot">
+        <div class="col-xs ">
+          <img src="/ressources/child.png" class="custom-img float-left" alt="pic">
+        </div>
+        <div class="col-xs my-auto left-align" style="margin-left:6vw;">
+          <div class="card-description my-auto">
+              <p>                
+                <i class="fa fa-heart"></i> Wasser für Jamal<br>
+                &nbsp;<i class="fa fa-map-marker"></i>&nbsp;&nbsp;Kisangara, Tanzania
+              </p>
+              <a href="/22/">Spenden</a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container-fluid"> <hr>
+      <div class="row auto-margin">
+        <div class="col-xs-12 auto-margin">
+          <a href="/hi" id="imprint">Über &middot;</a>
+          <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Coming soon!">
+            <a href="#" id="imprint" style="pointer-events: none;">Andere Projekte &middot;</i> </a>
+          </span>
+          <a href="/impressum.html" id="imprint">Impressum &middot; Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- JavaScript Libraries -->
+  <script src="/hi/lib/jquery/jquery.min.js"></script>
+  <script src="/hi/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // STICKY HEADER
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
+
+    // Get the header
+    var header = document.getElementById("header");
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+
+    // TOOLTIP
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  
+  </script>
+  </body>
+</html>

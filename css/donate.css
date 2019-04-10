@@ -124,16 +124,21 @@ a, a:hover {
     height: 6vh;
     background: rgba(255, 255, 255, 0.5);
     position: absolute;
+    width: 80vw;
     top: 5px;
-    left: 20vw;
+    left: 50%;
     display:none;
     padding: 1vh;
     color: var(--typo-secondary);
 
     /*border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;*/
+}
 
-    
+#about-banner-rel {
+    position: relative;
+    left: -50%;
+    padding: 0;
 }
 
 #about-btn {
@@ -303,11 +308,6 @@ a, a:hover {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     
-}
-
-#company-logo, #project-logo {
-    /* Optionally use class: img-fluid, which is max-width: 100% */
-    width: 10vw; 
 }
 
 .pip {

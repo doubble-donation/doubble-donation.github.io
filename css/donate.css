@@ -248,7 +248,7 @@ a, a:hover {
 
 /* 
 * PROJECT INFO
-* _BACK
+* _FRONT
 */
 
 #project-info {
@@ -305,9 +305,23 @@ a, a:hover {
     
 }
 
+#company-logo, #project-logo {
+    /* Optionally use class: img-fluid, which is max-width: 100% */
+    width: 10vw; 
+}
+
 .pip {
     /*background-image: url("/ressources/img/help3.png");*/
     background-image: url("/ressources/img/help1.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0%;
+
+    width: 100%;
+    height: auto;
+}
+
+#pip-placeholder {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 0%;

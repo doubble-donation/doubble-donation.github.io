@@ -157,7 +157,7 @@
 
           <!-- Accordion Begin -->
           <div id="accordion-pt">
-            <div class="card pip card-pt"> 
+            <div class="card card-pt" id="pip-placeholder">
               <div class="card-head-pt">
                 <h5 class="mb-0">
                   <button id="collapseOneHead-pt" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne-pt" aria-expanded="true" aria-controls="collapseOne-pt">
@@ -192,20 +192,21 @@
             <div class="card" id="card-pi" > 
               <div class="card-head-pi">
                   <button id="collapseOneHead-pi" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne-pi" aria-expanded="true" aria-controls="collapseOne-pi">
-                    <!--<i id="collapseOneHeadIcon-pi" class="align-top fa fa-caret-up accordion-icon"></i>-->
                     <hr class="horizontal-line-card">
                     <div class="container-fluid">
                         <div class="row">
                           <div class="col-2">
-                            <img class="img-fluid" src="/ressources/img/project-icon-svt.png">
+                            <img id="project-logo" class="img" src="">
                           </div>
                           <div class="col-8">
-                            <p id="p-head-pi">
-                              <b>Freezone<br>Straßenkids Mannheim</b>
-                            </p>
+                            <b>
+                              <p id="p-head-pi">
+                                <!-- Filled by db -->
+                              </p>
+                            </b>
                           </div>
-                          <div class="col-2">                            
-                            <img class="img-fluid" src="/ressources/img/project-icon-svt.png">
+                          <div class="col-2">
+                            <img id="company-logo" class="img" src="">
                           </div>
                           
                         </div>
@@ -216,15 +217,7 @@
               <div id="collapseOne-pi" class="collapse" aria-labelledby="headingOne-pi" data-parent="#accordion-pi">
                 <div class="card-body-pi text-center">
                   <div id="description-pi">
-                    <p>
-                      Freezone - Straßenkids Mannheim unterstützt Kinder, Jugendliche und junge Erwachsene im Alter von 12-25 Jahren, die von Obdachlosigkeit bedroht oder bereits obdachlos sind.</p>
-                    <p>
-                      Das Angebot von Freezone umfasst neben dem Angebot einer Anlaufstelle und Streetwork auch das Projekt StreetNight und die Mannheimer Straßenschule.</p>
-                    <p>
-                      Freezone – gegründet in 1997 – stellt heute unter alleiniger Trägerschaft des Johann-Peter-Hebel-Heims seine Angebote im Freezone-„Traumhaus“ in J7, 23 zur Verfügung.
-                      <!--
-                        Die Aufrechterhaltung und der bedarfsgerechte Ausbau des Angebotes von Freezone hängen heute und zukünftig von der Vielzahl von Privatpersonen und Unternehmen ab, die durch Ihr soziales Engagement die Unterstützung von Jugendlichen und jungen Erwachsenen in besonders schwierigen Situationen ermöglichen.</p>                        
-                      -->
+                    <!-- Filled by db -->
                     </p>
                   </div>
                 </div>
@@ -290,6 +283,22 @@
     </div>
   </footer>
 
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-database.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAaEGNHTHDu57U7SyI66kaVN8GgXNeOHNg",
+      authDomain: "doubble-80538.firebaseapp.com",
+      databaseURL: "https://doubble-80538.firebaseio.com",
+      projectId: "doubble-80538",
+      storageBucket: "doubble-80538.appspot.com",
+      messagingSenderId: "276151480630"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="/scripts/send-request.js"></script>
   <!-- JavaScript Libraries -->
   <script src="/hi/lib/jquery/jquery.min.js"></script>
   <script src="/hi/lib/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -308,26 +308,6 @@
   <script src="./hammer.min.js"></script>
 
   <script>
-    let collapseOnePt = $("#collapseOne-pt")
-    let collapseOneHeadPt = $("#collapseOneHead-pt")
-    let collapseOneHeadIconPt = $("#collapseOneHeadIcon-pt")
-
-    collapseOneHeadPt.click(function () {
-      if(collapseOnePt.hasClass("show")) {
-        collapseOneHeadIconPt.addClass("fa-rotate-180")
-      } else collapseOneHeadIconPt.removeClass("fa-rotate-180")
-    })
-
-    let collapseOnePi = $("#collapseOne-pi")
-    let collapseOneHeadPi = $("#collapseOneHead-pi")
-    let collapseOneHeadIconPi = $("#collapseOneHeadIcon-pi")
-
-    collapseOneHeadPi.click(function () {
-      if(collapseOnePi.hasClass("show")) {
-        collapseOneHeadIconPi.removeClass("fa-rotate-180")
-      } else collapseOneHeadIconPi.addClass("fa-rotate-180")
-    })
-
     // Slider stuff
     var slider = document.getElementById("range-ba");
     var output = document.getElementById("amount");    
@@ -342,6 +322,9 @@
     /* Click Detection: get outer divs of project teaser and project info
     * Collapse: use collapseOnePt and collapseOnePi elements from above
     */
+    let collapseOnePt = $("#collapseOne-pt")
+    let collapseOnePi = $("#collapseOne-pi")
+
     let ptElement = document.getElementById("project-teaser")
     let piElement = document.getElementById("project-info")
     
@@ -353,6 +336,7 @@
     piHammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
     // add event listeners
+    // For mobile gesture event teaser-card
     ptHammertime.on('panup pandown', function(ev) {
       if (ev.type == "panup" && !collapseOnePt.hasClass("show")) collapseOnePt.collapse("toggle")
       else if (ev.type == "pandown" && collapseOnePt.hasClass("show")) {
@@ -360,6 +344,15 @@
         if (collapseOnePi.hasClass("show")) collapseOnePi.collapse("toggle")
       }
     });
+    // For click Event teaser-card
+    $("#collapseOneHead-pt").on("click", function(ev) {
+      if (collapseOnePt.hasClass("show") && collapseOnePi.hasClass("show")) {
+        // only toggle the other card. This card is toggled by accordion anyway
+        collapseOnePi.collapse("toggle")
+      }
+    })
+    
+    // For mobile gesture event info-card
     piHammertime.on('panup pandown', function(ev) {
       if (ev.type == "panup" && !collapseOnePi.hasClass("show")) {
         collapseOnePi.collapse("toggle")
@@ -368,6 +361,14 @@
     }
       else if (ev.type == "pandown" && collapseOnePi.hasClass("show")) collapseOnePi.collapse("toggle")
     });
+
+    // For click Event info-card
+    $("#collapseOneHead-pi").on("click", function(ev) {
+      if (!collapseOnePi.hasClass("show") && !collapseOnePt.hasClass("show")) {
+        // only toggle the other card. This card is toggled by accordion anyway
+        collapseOnePt.collapse("toggle")
+    } 
+    })
 
     // Tooltip
     $(function () {
@@ -389,6 +390,13 @@
     /*$("#about-btn").on("click", function() {
       vid.play();
     })*/
+
+    // Set about banner
+    let aboutBanner = $("#about-banner")
+    let aboutOffset = ($(window).width()/2)-(aboutBanner.width()/2)
+    aboutBanner.css("left", aboutOffset+"px")
+
+    function log(msg) { console.log(msg) }
   </script>
 
   </div>

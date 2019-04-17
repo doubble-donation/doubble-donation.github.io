@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--
-    TODO: Redirect 1 -> donate
-  -->
   <meta charset="utf-8">
   <title>Doubble - Donation made simple</title>
   <!--<meta content="width=device-width, initial-scale=1.0" name="viewport">-->
@@ -41,6 +38,33 @@
 
     gtag('config', 'UA-136781716-1');
   </script>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+
+  <!--
+    Cookie Notice: Probs to cookieconsent: https://cookieconsent.insites.com/demos/
+  -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#ffffff80"
+        },
+        "button": {
+          "background": "#ececec",
+          "text": "#848484"
+        }
+      },
+      "theme": "classic",
+      "position": "top",
+      "content": {
+        "message": "Diese Webseite verwendet Cookies.",
+        "dismiss": "Verstanden.",
+        "link": "Mehr"
+      }
+    })});
+  </script>
   <style>
     .red { background-color: red; }
     .yl { background-color: yellow; }
@@ -50,16 +74,6 @@
 <body>
   <!-- Outer Container Begin-->
   <div id="container">
-  <div id="about-banner">
-    <div id="about-banner-rel">
-      <div class="text-center">
-      <!-- Button trigger modal -->
-      <button type="button" id="about-btn" class="" data-toggle="modal" data-target="#exampleModal">
-          Doubble in 60 Sekunden erklärt
-      </button>
-      </div>
-    </div>
-  </div>
   
   <!-- Modal für Video -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -120,12 +134,18 @@
   <div id="header">
     <div class="container-fluid">
       <div class="row header-logo">
-          <span data-toggle="tooltip" data-placement="bottom" title="Login coming soon!">
-            <div class="col my-auto">
-              <img class="header-icon float-left" src="/ressources/icons/burger.png">
-            </div>
-          </span>
-        <div class="col my-auto" >
+        <span data-toggle="tooltip" data-placement="bottom" title="Login coming soon!">
+          <div class="col-2">
+            <img class="header-icon float-left" src="/ressources/icons/burger.png">
+          </div>
+        </span>
+        <div class="col-8 text-center" id="about-btn-container">
+          <!-- Button trigger modal -->
+          <button style="margin:auto;" type="button" id="about-btn" class="" data-toggle="modal" data-target="#exampleModal">
+              Doubble in 60 Sekunden erklärt
+          </button>
+        </div>
+        <div class="col-2" >
           <!--<img class="header-icon float-right" src="/ressources/icons/avatar.png">-->
           <img class="header-icon float-right" src="/ressources/favicon/secondary_apple-touch-icon.png" style="border-radius: 50%">
         </div>
@@ -408,7 +428,7 @@
     })
 
     // Help banner
-    $("#about-banner").delay(3000).fadeIn('slow');
+    $("#about-btn").delay(3000).fadeIn('slow');
   
     // Video autoplay setting
     var vid = document.getElementById("about-doubble-vid"); 
@@ -424,9 +444,9 @@
     })*/
 
     // Set about banner
-    let aboutBanner = $("#about-banner")
+    /*let aboutBanner = $("#about-banner")
     let aboutOffset = ($(window).width()/2)-(aboutBanner.width()/2)
-    aboutBanner.css("left", aboutOffset+"px")
+    aboutBanner.css("left", aboutOffset+"px")*/
 
     function log(msg) { console.log(msg) }
   </script>

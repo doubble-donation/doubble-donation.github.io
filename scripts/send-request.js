@@ -39,6 +39,7 @@ function writeToApp(data) {
   $("#description-pi").html("<p>"+data.textLong+"</p>")
   // Bild
   $( "#pip-placeholder" ).css( 'background-image', 'url("'+ data.teaser +'")')
+  //$( "#pip-placeholder" ).css( 'background-image', 'url("/ressources/img/aufwind.gif")')
   // Project Logo
   $( "#project-logo" ).attr("src", data.projectLogo)
   // Company Logo

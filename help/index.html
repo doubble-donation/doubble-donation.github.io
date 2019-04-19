@@ -43,25 +43,26 @@
   <!--
     Cookie Notice: Probs to cookieconsent: https://cookieconsent.insites.com/demos/
   -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>-->
+  <script src="/scripts/cookieconsent2.3.1.0.min.js"></script>
   <script>
     window.addEventListener("load", function(){
     window.cookieconsent.initialise({
       "palette": {
         "popup": {
-          "background": "#ffffff80"
+          "background": "#eea4a480"
         },
         "button": {
-          "background": "#ececec",
-          "text": "#848484"
+          "background": "#fff",
+          "text": "#505050"
         }
       },
       "theme": "classic",
       "position": "top",
       "content": {
-        "message": "Diese Webseite verwendet Cookies.",
+        "message": "Diese Webseite verwendet",
         "dismiss": "Verstanden.",
-        "link": "Mehr"
+        "link": "Cookies."
       }
     })});
   </script>
@@ -85,7 +86,6 @@
         <div class="modal-body" style="margin: auto;">
           <video style="width: 100%" id="about-doubble-vid" controls>
               <source src="/ressources/vid/about_doubble.mp4" type="video/mp4">
-              <source src="movie.ogg" type="video/ogg">
             Dein Browser unterstützt das Format leider nicht.
           </video>
         </div>
@@ -107,20 +107,21 @@
             <h5 class="modal-title" id="disclaimerModalLabel">Doubble - Disclaimer</h5>
           </div>
           <div class="modal-body" style="margin: auto;">
-              <p>Mit einem Klick auf <em>Helfen</em> führst du eine Schenkung durch.
-                Deine Schenkung wird auf das PayPal Konto von TR überwiesen.
-                Dies ist keine Spende, weshalb auch keine Spendenquittung ausgestellt werden kann.
-                Alle Schenkungen werden gesammelt am 27.04. an das Projekt übergeben.
-              </p>
-              <p>
-                Möchtest du Feedback zu unserer Kampagne und Deiner Schenkung erhalten, schreibe bitte ein kurze
-                Nachricht an <u><a href="mailto:info@doubble.eu">info@doubble.eu</a></u> mit entsprechendem Hinweis.
-                Wir werden dich dann sehr gerne nach dem 27.04. mit Informationen zu den Projekten, die wir
-                unterstützen konnten, kontaktieren.
-              </p>
-              <p>
-                Bei Fragen wende dich bitte an <u><a href="mailto:info@doubble.eu">info@doubble.eu</a></u>.
-              </p>
+            <p>Mit einem Klick auf <em>Helfen</em> führst du eine Schenkung durch.
+              Deine Schenkung wird auf das PayPal Konto von TR überwiesen.
+              Da dies ein realer Proof of Concept ist, handelt es sich um eine Schenkung.
+              Dies ist keine Spende, weshalb auch keine Spendenquittung ausgestellt werden kann.
+              Alle Schenkungen werden im Mai gesammelt an das Projekt übergeben.
+            </p>
+            <p>
+              Möchtest du Feedback zu unserer Kampagne und Deiner Schenkung erhalten, schreibe bitte ein kurze
+              Nachricht an <u><a href="mailto:info@doubble.eu">info@doubble.eu</a></u> mit entsprechendem Hinweis.
+              Wir werden dich dann sehr gerne nach der Übergabe im Mai mit Informationen zu den Projekten, die wir
+              unterstützen konnten, kontaktieren.
+            </p>
+            <p>
+              Bei Fragen wende dich bitte an <u><a href="mailto:info@doubble.eu">info@doubble.eu</a></u>.
+            </p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-modal-close" data-dismiss="modal">Close</button>          
@@ -302,7 +303,8 @@
               <div class="row">
                 <div class="col-12 margin-bot">
                   <p id="disclaimer" class="text-center" data-toggle="modal" data-target="#disclaimerModal">
-                    Alle Schenkungen werden am 27.04. gesammelt übergeben &nbsp;<i style="font-size: 16px;" class="fa fa-question-circle"></i>
+                    Disclaimer: Es handelt sich um eine Schenkung. <span>Mehr &nbsp;<i style="font-size: 14px;" class="fa fa-question-circle"></i></span>
+                    
                   </p>
                 </div>
                 <div class="col-7">
@@ -442,11 +444,6 @@
     /*$("#about-btn").on("click", function() {
       vid.play();
     })*/
-
-    // Set about banner
-    /*let aboutBanner = $("#about-banner")
-    let aboutOffset = ($(window).width()/2)-(aboutBanner.width()/2)
-    aboutBanner.css("left", aboutOffset+"px")*/
 
     function log(msg) { console.log(msg) }
   </script>

@@ -125,6 +125,11 @@ a, a:hover {
     padding-top: 4px;
 }
 
+#disclaimer span {
+    color: var(--cl-secondary);
+    font-style: normal;
+}
+
 /*
 * ABOUT BANNER
 */

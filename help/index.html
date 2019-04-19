@@ -135,11 +135,9 @@
   <div id="header">
     <div class="container-fluid">
       <div class="row header-logo">
-        <span data-toggle="tooltip" data-placement="bottom" title="Login coming soon!">
-          <div class="col-2">
-            <img class="header-icon float-left" src="/ressources/icons/burger.png">
-          </div>
-        </span>
+        <div class="col-2" data-toggle="tooltip" data-placement="bottom" title="Login coming soon!">
+          <img class="header-icon float-left" src="/ressources/icons/burger.png">
+        </div>
         <div class="col-8 text-center" id="about-btn-container">
           <!-- Button trigger modal -->
           <button style="margin:auto;" type="button" id="about-btn" class="" data-toggle="modal" data-target="#exampleModal">
@@ -292,11 +290,11 @@
           <div id="content-ba">
             <div class="slidecontainer margin-bot-s">
               <div style="padding-top:20px; display: inline;">
-                <input type="range" min="10" max="99" value="20" class="slider" id="range-ba">
+                <input type="range" min="10" max="99" value="19" class="slider" id="range-ba">
               </div>
-              <span class="range-slider-value"><span id="amount">2.5</span> €</span>
+              <span class="range-slider-value"><span id="amount">1.9</span> €</span>
             </div>
-            <a href="/thanks/">
+            <a id="help-btn-a" href="https://www.paypal.me/doubblehelp/1.9">
               <button type="button" class="btn" id="helfen-action-btn">Helfen&nbsp;&nbsp;<i class="fa fa-paypal"></i></button>
             </a>
             <div class="margin--sm">
@@ -364,12 +362,23 @@
   <script>
     // Slider stuff
     var slider = document.getElementById("range-ba");
-    var output = document.getElementById("amount");    
-    slider.value = 25; //must be between 10 and 99
+    var output = document.getElementById("amount");
+    slider.value = 19; //must be between 10 and 99
     output.innerHTML = (slider.value/10).toFixed(1);
+    let ppLinkBase = "https://www.paypal.me/doubblehelp/"
+    let ppAmount
+    setPpAmount()
+    
+    function setPpAmount () {
+      // Sets the PayPal link
+      ppAmount = (slider.value/10).toFixed(1)
+      $("#help-btn-a").attr("href", ppLinkBase+ppAmount)
+    }
     
     slider.oninput = function() {
+      // Event Listener for input on slider
       output.innerHTML = (this.value/10).toFixed(1);
+      setPpAmount();
     }
 
     // Hammer js

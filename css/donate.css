@@ -116,35 +116,32 @@ a, a:hover {
     
 }
 
+#disclaimer {
+    font-style: italic; 
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--typo-tertiary);
+    margin:auto;
+    padding-top: 4px;
+}
+
+#disclaimer span {
+    color: var(--cl-secondary);
+    font-style: normal;
+}
+
 /*
 * ABOUT BANNER
 */
-#about-banner {
-    z-index: 4;
-    height: 6vh;
-    background: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    width: auto;
-    top: 5px;
-    display:none;
-    padding: 1vh;
-    color: var(--typo-secondary);
-
-    /*border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;*/
+#about-btn-container {
+    margin-top:-10px;
 }
-
-/*#about-banner-rel {
-    position: relative;
-    left: -50%;
-    padding: 0;
-}*/
 
 #about-btn {
     font-size: 12px;
     width: auto;
     margin: 0;
-
+    display: none;
     background-color: #fff;
     color: var(--cl-primary);
 
@@ -178,6 +175,8 @@ a, a:hover {
 }
 
 
+
+
 /* HEADER */
 #header{
     background-color: white;
@@ -190,7 +189,7 @@ a, a:hover {
 
 .header-icon {
     max-height: 4vh;
-    max-width: 8vw;
+    max-width: 6vw;
 }
 
 /* 
@@ -362,10 +361,15 @@ a, a:hover {
     font-size: 18px;
 }
 
-#content-ba button:focus, #content-ba button:active {
-    outline: red !important;
-    border: none;
+#content-ba button:focus, #content-ba button:active,
+#content-ba button:hover {
+    outline: none !important;
     box-shadow: none;
+    margin:0 !important;
+}
+
+#content-ba button:active, #content-ba button:hover {
+    background-color: var(--cl-secondary);
 }
 
 /* Slider */
@@ -446,6 +450,14 @@ a, a:hover {
 input::-moz-focus-inner,
 input::-moz-focus-outer { 
   border: 0; 
+}
+
+/*
+* DISCLAIMER MODAL
+*/
+
+#disclaimerModal {
+    z-index: 4000 !important;
 }
 
 /*

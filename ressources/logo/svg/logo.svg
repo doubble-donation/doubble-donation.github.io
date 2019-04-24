@@ -1,0 +1,25 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="800" height="800" fill="white"/>
+<rect y="0.578613" width="16" height="800" fill="#E46E6E"/>
+<rect x="14.7808" width="20.6161" height="800.619" transform="rotate(1 14.7808 0)" fill="#E46E6E"/>
+<rect width="16" height="799.144" transform="matrix(0 -1 -1 0 807.422 799.586)" fill="#E46E6E"/>
+<rect width="20.6161" height="799.763" transform="matrix(-0.0174337 -0.999848 -0.999847 0.0174711 808 784.613)" fill="#E46E6E"/>
+<rect width="16" height="799.144" transform="matrix(0 1 1 0 18.578 0)" fill="#E46E6E"/>
+<rect width="20.6161" height="799.763" transform="matrix(0.0174337 0.999848 0.999847 -0.0174711 18 14.9727)" fill="#E46E6E"/>
+<rect x="800.394" y="800.279" width="16" height="800" transform="rotate(-180 800.394 800.279)" fill="#E46E6E"/>
+<rect x="785.613" y="800.857" width="20.6161" height="800.619" transform="rotate(-179 785.613 800.857)" fill="#E46E6E"/>
+<rect x="220" y="220" width="360" height="360" fill="#5BEED4"/>
+<rect x="220" y="570.283" width="360" height="16" transform="rotate(-1 220 570.283)" fill="#5BEED4"/>
+<rect x="220" y="220.283" width="360" height="16" transform="rotate(-1 220 220.283)" fill="#5BEED4"/>
+<rect x="564.899" y="579.747" width="365.556" height="16" transform="rotate(-89 564.899 579.747)" fill="#5BEED4"/>
+<rect x="209.001" y="585.677" width="365.732" height="16" transform="rotate(-89 209.001 585.677)" fill="#5BEED4"/>
+<rect x="574.8" y="214.09" width="12.46" height="1" transform="rotate(-1 574.8 214.09)" fill="#5BEED4"/>
+<rect x="209.005" y="585.477" width="11.9874" height="1" transform="rotate(-1 209.005 585.477)" fill="#5BEED4"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="800" height="800" fill="white"/>
+</clipPath>
+</defs>
+</svg>

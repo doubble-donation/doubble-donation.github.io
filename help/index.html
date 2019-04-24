@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>Doubble - Donation made simple</title>
   <!--<meta content="width=device-width, initial-scale=1.0" name="viewport">-->
-  <meta content="donation enjoy" name="keywords">
-  <meta content="Donation amde simple" name="description">
+  <meta content="help enjoy" name="keywords">
+  <meta content="Helping made simple" name="description">
   <meta content="#FFFFFF" name = "theme-color">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -199,7 +199,8 @@
         </div>
         <div class="col-2" >
           <!--<img class="header-icon float-right" src="/ressources/icons/avatar.png">-->
-          <img class="header-icon float-right" src="/ressources/favicon/secondary_apple-touch-icon.png" style="border-radius: 50%">
+          <!--<img class="header-icon float-right" src="/ressources/favicon/secondary_apple-touch-icon.png" style="border-radius: 50%">-->
+          <img class="header-icon header-icon-dlogo float-right" src="/ressources/logo/svg/logo-text-sm-nopadding.svg">
         </div>
       </div>
     </div>
@@ -441,9 +442,10 @@
 
     // Event Listener for Help action btn
     $('#helfen-action-btn').on("click", function () {
+      piClicked = true
       setTimeout(function () {
         window.location.href = ppLinkBase+ppAmount;
-      }, 4000);
+      }, 6000);
     })
 
     // Hammer js

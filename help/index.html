@@ -88,6 +88,11 @@
               <source src="/ressources/vid/about_doubble.mp4" type="video/mp4">
             Dein Browser unterstützt das Format leider nicht.
           </video>
+          <p class="typo-tertiary">
+              Carefree Melody von Twin Musicom ist unter der Lizenz <u><a href="https://creativecommons.org/licenses/by/4.0/">"Creative Commons Attribution"</a></u> lizenziert.
+              Quelle: <u><a href="http://www.twinmusicom.org/song/302/carefree-melody">twinmusicom</a></u>
+              Künstler: <u><a href="http://www.twinmusicom.org">twinmusicom</a></u>
+          </p>
         </div>
         <div class="modal-footer text-center">
             <p>Für noch mehr Informationen, schiebe beide Karten in der App nach unten.</p>
@@ -101,34 +106,82 @@
 
   <!-- Modal für Disclaimer -->
   <div class="modal fade" id="disclaimerModal" tabindex="-1" role="dialog" aria-labelledby="disclaimerModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="disclaimerModalLabel">Doubble - Disclaimer</h5>
-          </div>
-          <div class="modal-body" style="margin: auto;">
-            <p>Mit einem Klick auf <em>Helfen</em> führst du eine Schenkung durch.
-              Deine Schenkung wird auf das PayPal Konto von TR überwiesen.
-              Da dies ein realer Proof of Concept ist, handelt es sich um eine Schenkung.
-              Dies ist keine Spende, weshalb auch keine Spendenquittung ausgestellt werden kann.
-              Alle Schenkungen werden im Mai gesammelt an das Projekt übergeben.
-            </p>
-            <p>
-              Möchtest du Feedback zu unserer Kampagne und Deiner Schenkung erhalten, schreibe bitte ein kurze
-              Nachricht an <u><a href="mailto:info@doubble.eu">info@doubble.eu</a></u> mit entsprechendem Hinweis.
-              Wir werden dich dann sehr gerne nach der Übergabe im Mai mit Informationen zu den Projekten, die wir
-              unterstützen konnten, kontaktieren.
-            </p>
-            <p>
-              Bei Fragen wende dich bitte an <u><a href="mailto:info@doubble.eu">info@doubble.eu</a></u>.
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-modal-close" data-dismiss="modal">Close</button>          
-          </div>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="disclaimerModalLabel">Doubble - Disclaimer</h5>
+        </div>
+        <div class="modal-body" style="margin: auto;">
+          <p>Mit einem Klick auf <em>Helfen</em> führst du eine Schenkung durch.
+            Deine Schenkung wird auf das PayPal Konto von TR überwiesen.
+            Da dies ein realer Proof of Concept ist, handelt es sich um eine Schenkung.
+            Dies ist keine Spende, weshalb auch keine Spendenquittung ausgestellt werden kann.
+            Alle Schenkungen werden am 18. Mai gesammelt an das Projekt übergeben.
+          </p>
+          <p>
+            Möchtest du Feedback zu unserer Kampagne und Deiner Schenkung erhalten, schreibe bitte ein kurze
+            Nachricht an <u><a href="mailto:info@doubble.eu">info@doubble.eu</a></u> mit entsprechendem Hinweis.
+            Wir werden dich dann sehr gerne nach der Übergabe am 18. Mai mit Informationen zu den Projekten, die wir
+            unterstützen konnten, kontaktieren.
+          </p>
+          <p>
+            Bei Fragen wende dich bitte an <u><a href="mailto:info@doubble.eu">info@doubble.eu</a></u>.
+          </p>
+          <h5>
+            Datenschutzerklärung
+          </h5>
+          <p>
+            Um zur Datenschutzerklärung zu kommen, klicke bitte auf <u><a href="/impressum.html#datenschutz">Datenschutz</a></u>.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-modal-close" data-dismiss="modal">Close</button>          
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Modal für Redirect -->
+  <div class="modal fade" id="redirectModal" tabindex="-1" role="dialog" aria-labelledby="redirectModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="redirectModalLabel">Weiterleitung zu <i class="fa fa-paypal"></i></h5>
+        </div>
+        <div class="modal-body" style="margin: auto;">
+          <p>
+            Wir leiten Dich jetzt zu PayPal weiter. Bitte beachte
+            <ul>
+              <li>
+                <p>
+                  Wir befinden uns in einer <b>Testphase</b>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Daher sammeln wir das Geld auf einem <b>eigens angelegten Privatkonto</b>.
+                </p>
+              </li>  
+              <li>
+                <p>
+                  Das Geld wird gesammelt am <b>18. Mai</b> an Aufwind übergeben.
+                </p>
+              </li>  
+            </ul>
+          </p>
+        </div>
+        <div class="modal-footer">     
+          <p>
+            <div class="d-flex justify-content-center">
+              <div class="spinner-border spinner-cstm" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   
   <!-- Header -->
@@ -140,7 +193,7 @@
         </div>
         <div class="col-8 text-center" id="about-btn-container">
           <!-- Button trigger modal -->
-          <button style="margin:auto;" type="button" id="about-btn" class="" data-toggle="modal" data-target="#exampleModal">
+          <button style="margin:auto;" type="button" id="about-btn" data-toggle="modal" data-target="#exampleModal">
               Doubble in 60 Sekunden erklärt
           </button>
         </div>
@@ -233,7 +286,8 @@
   <!-- Project Teaser End -->
 
   <!-- Project Info -->
-  <div id="project-info">
+  <div id="project-info" class="animated">
+  <!--<div id="project-info">-->
     <div class="container-fluid">
       <div class="row">
         <div class="col my-auto">
@@ -258,7 +312,7 @@
                           </div>
                           <div class="col-2">
                             <img id="company-logo" class="img-fluid" src="">
-                          </div>                          
+                          </div>
                         </div>
                       </div>
                   </button>
@@ -294,15 +348,17 @@
               </div>
               <span class="range-slider-value"><span id="amount">1.9</span> €</span>
             </div>
-            <a id="help-btn-a" href="https://www.paypal.me/doubblehelp/1.9">
+            <a id="help-btn-a" data-toggle="modal" data-target="#redirectModal">
               <button type="button" class="btn" id="helfen-action-btn">Helfen&nbsp;&nbsp;<i class="fa fa-paypal"></i></button>
             </a>
+            <!--<a id="help-btn-a" href="https://www.paypal.me/doubblehelp/1.9">
+              <button type="button" class="btn" id="helfen-action-btn">Helfen&nbsp;&nbsp;<i class="fa fa-paypal"></i></button>
+            </a>-->
             <div class="margin--sm">
               <div class="row">
                 <div class="col-12 margin-bot">
                   <p id="disclaimer" class="text-center" data-toggle="modal" data-target="#disclaimerModal">
                     Disclaimer: Es handelt sich um eine Schenkung. <span>Mehr &nbsp;<i style="font-size: 14px;" class="fa fa-question-circle"></i></span>
-                    
                   </p>
                 </div>
                 <div class="col-7">
@@ -360,6 +416,8 @@
   <script src="./hammer.min.js"></script>
 
   <script>
+    // for bounce effect
+    let piClicked = false;
     // Slider stuff
     var slider = document.getElementById("range-ba");
     var output = document.getElementById("amount");
@@ -372,14 +430,21 @@
     function setPpAmount () {
       // Sets the PayPal link
       ppAmount = (slider.value/10).toFixed(1)
-      $("#help-btn-a").attr("href", ppLinkBase+ppAmount)
+      //$("#help-btn-a").attr("href", ppLinkBase+ppAmount)
     }
     
     slider.oninput = function() {
-      // Event Listener for input on slider
+      // Event Listener for inpfut on slider
       output.innerHTML = (this.value/10).toFixed(1);
       setPpAmount();
     }
+
+    // Event Listener for Help action btn
+    $('#helfen-action-btn').on("click", function () {
+      setTimeout(function () {
+        window.location.href = ppLinkBase+ppAmount;
+      }, 4000);
+    })
 
     // Hammer js
     /* Click Detection: get outer divs of project teaser and project info
@@ -417,6 +482,7 @@
     
     // For mobile gesture event info-card
     piHammertime.on('panup pandown', function(ev) {
+      piClicked = true // for bounce effect
       if (ev.type == "panup" && !collapseOnePi.hasClass("show")) {
         collapseOnePi.collapse("toggle")
         // if teaser is not shown also toggle teaser
@@ -453,6 +519,22 @@
     /*$("#about-btn").on("click", function() {
       vid.play();
     })*/
+
+    let piElementjq = $("#project-info")
+
+    // Events listener for click
+    piElementjq.on("click ", () => {piClicked = true})
+
+
+    setTimeout(function () {
+      if (!piClicked) {
+      piElementjq.addClass("bounce")
+      setTimeout(function () {
+          piElementjq.removeClass("bounce")
+        }, 800);
+      }
+      else return
+      }, 5000);
 
     function log(msg) { console.log(msg) }
   </script>

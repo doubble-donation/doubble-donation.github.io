@@ -26,7 +26,7 @@
     --card-body-pt-height: 47vh;
 
     --project-info-top: 76vh; /* anchored to bottom, that's were the containers end*/
-    --card-head-pi-height: 14vh;
+    --card-head-pi-height: 15vh;
     --card-body-pi-height: 47vh;
 
     --button-action-top: 74vh; /* anchored to top, that's were the containers starts*/
@@ -463,6 +463,13 @@ input::-moz-focus-outer {
 }
 
 /*
+* REDIRECT MODAL
+*/
+
+.modal-body p ul{
+    font-size: 12px;
+}
+/*
 * FOOTER
 */
 
@@ -525,6 +532,11 @@ footer {
     color: var(--cl-primary);
 }
 
+.typo-tertiary {
+    color: var(--typo-tertiary);
+    font-size: 10px;
+}
+
 .no-border {
     border: none !important;
 }
@@ -533,3 +545,46 @@ footer {
     border-bottom: 1px solid var(--cl-secondary) !important;
     
 }
+
+.spinner-cstm {
+    color: var(--cl-primary);
+}
+
+/* 
+* Bounce Animation
+* Source: https://stackoverflow.com/q/32306089/11339617
+*/
+
+.animated {
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+
+  }
+  @-webkit-keyframes bounce {
+    0%, 100% {
+      -webkit-transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(-10px);
+    }
+  }
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+  }

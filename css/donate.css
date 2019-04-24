@@ -463,6 +463,13 @@ input::-moz-focus-outer {
 }
 
 /*
+* REDIRECT MODAL
+*/
+
+.modal-body p ul{
+    font-size: 12px;
+}
+/*
 * FOOTER
 */
 
@@ -532,4 +539,8 @@ footer {
 #nav-tab .active {
     border-bottom: 1px solid var(--cl-secondary) !important;
     
+}
+
+.spinner-cstm {
+    color: var(--cl-primary);
 }

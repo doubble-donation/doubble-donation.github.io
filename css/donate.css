@@ -405,7 +405,7 @@ a, a:hover {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: darken(var(--cl-primary);
+    background: var(--cl-primary);
     cursor: pointer;
 }
 

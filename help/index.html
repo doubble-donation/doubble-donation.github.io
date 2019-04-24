@@ -276,7 +276,8 @@
   <!-- Project Teaser End -->
 
   <!-- Project Info -->
-  <div id="project-info">
+  <div id="project-info" class="animated">
+  <!--<div id="project-info">-->
     <div class="container-fluid">
       <div class="row">
         <div class="col my-auto">
@@ -405,6 +406,8 @@
   <script src="./hammer.min.js"></script>
 
   <script>
+    // for bounce effect
+    let piClicked = false;
     // Slider stuff
     var slider = document.getElementById("range-ba");
     var output = document.getElementById("amount");
@@ -426,6 +429,7 @@
       setPpAmount();
     }
 
+    // Event Listener for Help action btn
     $('#helfen-action-btn').on("click", function () {
       setTimeout(function () {
         window.location.href = ppLinkBase+ppAmount;
@@ -468,6 +472,7 @@
     
     // For mobile gesture event info-card
     piHammertime.on('panup pandown', function(ev) {
+      piClicked = true // for bounce effect
       if (ev.type == "panup" && !collapseOnePi.hasClass("show")) {
         collapseOnePi.collapse("toggle")
         // if teaser is not shown also toggle teaser
@@ -504,6 +509,23 @@
     /*$("#about-btn").on("click", function() {
       vid.play();
     })*/
+
+    let piElementjq = $("#project-info")
+
+    // Events listener for click
+    piElementjq.on("click ", () => {piClicked = true})
+
+
+    setTimeout(function () {
+      log(piClicked)
+      if (!piClicked) {
+      piElementjq.addClass("bounce")
+      setTimeout(function () {
+          piElementjq.removeClass("bounce")
+        }, 800);
+      }
+      else return
+      }, 5000);
 
     function log(msg) { console.log(msg) }
   </script>

@@ -192,6 +192,11 @@ a, a:hover {
     max-width: 6vw;
 }
 
+.header-icon-dlogo {
+    max-height: 6vh !important;
+    max-width: 10vw !important;
+}
+
 /* 
 * DOUBBLE INFO
 * _BACK
